@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mourad Do Rego — Data Scientist &amp; GenAI Engineer</title>
+<meta name="description" content="Portfolio de Mourad Do Rego — Data Scientist &amp; GenAI Engineer, Biostatisticien. Machine Learning, MLOps, RAG/LLM.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="lang-fr">
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span class="lang-fr">Portfolio &middot; Data Science &middot; IA &middot; Biostatistique</span>
+      <span class="lang-en">Portfolio &middot; Data Science &middot; AI &middot; Biostatistics</span>
+    </div>
+    <div class="topbar-right">
+      <a class="cv-download" href="assets/CV_Mourad_Do_Rego.pdf" target="_blank" rel="noopener">
+        <span class="lang-fr">Voir le CV</span>
+        <span class="lang-en">View résumé</span>
+      </a>
+      <a class="cv-download" href="assets/CV_Mourad_Do_Rego.pdf" download>
+        <span class="lang-fr">&darr; Télécharger le CV</span>
+        <span class="lang-en">&darr; Download résumé</span>
+      </a>
+      <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">
+        <span data-lang="fr" class="active">FR</span><span>/</span><span data-lang="en">EN</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <canvas id="heroParticles" class="hero-particles" aria-hidden="true"></canvas>
+  <div class="hero-cursor-glow" id="heroCursorGlow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow lang-fr">Data Scientist &amp; GenAI Engineer &middot; Biostatisticien</p>
+      <p class="eyebrow lang-en">Data Scientist &amp; GenAI Engineer &middot; Biostatistician</p>
+      <h1 class="hero-name">Mourad <em>Do Rego</em></h1>
+
+      <div class="hero-badges">
+        <span class="badge gold lang-fr">Ouvert aux opportunités</span>
+        <span class="badge gold lang-en">Open to opportunities</span>
+        <span class="badge">Python &middot; R &middot; SQL &middot; SAS</span>
+        <span class="badge">XGBoost &middot; LangChain &middot; FastAPI</span>
+        <span class="badge lang-fr">France &middot; mobilité totale</span>
+        <span class="badge lang-en">France &middot; fully mobile</span>
+      </div>
+
+      <div class="hero-links">
+        <a href="mailto:mouwahiddorego@gmail.com" class="lang-fr">Email &nearr;</a>
+        <a href="mailto:mouwahiddorego@gmail.com" class="lang-en">Email &nearr;</a>
+        <a href="https://github.com/Dboy003" target="_blank" rel="noopener">GitHub &nearr;</a>
+        <a href="https://www.linkedin.com/in/mourad-do-rego/" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+        <a href="#" onclick="showPage('chatbot'); return false;" class="lang-fr">Discuter avec mon assistant IA &nearr;</a>
+        <a href="#" onclick="showPage('chatbot'); return false;" class="lang-en">Talk to my AI assistant &nearr;</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="hero-photo">
+        <img src="assets/photo.jpeg" alt="Mourad Do Rego">
+      </div>
+      <div class="coord-panel">
+      <p class="coord-head lang-fr">Journal de bord &mdash; coordonnées</p>
+      <p class="coord-head lang-en">Field log &mdash; coordinates</p>
+      <div class="coord-line"><span class="place">Cotonou, Bénin</span><span class="val">6.36°N, 2.42°E</span></div>
+      <div class="coord-line"><span class="place">Caen, France</span><span class="val">49.18°N, 0.37°W</span></div>
+      <div class="coord-line"><span class="place">Île-de-France, France</span><span class="val">48.85°N, 2.35°E</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NAV TABS ============ -->
+<nav class="nav-tabs">
+  <div class="wrap">
+    <button class="tab-btn active" data-page="accueil" onclick="showPage('accueil')">
+      <span class="idx">🧭</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span>
+    </button>
+    <button class="tab-btn" data-page="parcours" onclick="showPage('parcours')">
+      <span class="idx">🗺️</span><span class="lang-fr">Parcours</span><span class="lang-en">Journey</span>
+    </button>
+    <button class="tab-btn" data-page="experiences" onclick="showPage('experiences')">
+      <span class="idx">💼</span><span class="lang-fr">Expériences</span><span class="lang-en">Experience</span>
+    </button>
+    <button class="tab-btn" data-page="projets" onclick="showPage('projets')">
+      <span class="idx">🧪</span><span class="lang-fr">Projets</span><span class="lang-en">Projects</span>
+    </button>
+    <button class="tab-btn" data-page="competences" onclick="showPage('competences')">
+      <span class="idx">🛠️</span><span class="lang-fr">Compétences</span><span class="lang-en">Skills</span>
+    </button>
+    <button class="tab-btn" data-page="aspirations" onclick="showPage('aspirations')">
+      <span class="idx">🎯</span><span class="lang-fr">Aspirations</span><span class="lang-en">Aspirations</span>
+    </button>
+    <button class="tab-btn" data-page="chatbot" onclick="showPage('chatbot')">
+      <span class="idx">🤖</span><span class="lang-fr">Assistant IA</span><span class="lang-en">AI Assistant</span>
+    </button>
+  </div>
+</nav>
+
+<main class="wrap" id="mainContent">
+
+<!-- ============ PAGE 01 — ACCUEIL ============ -->
+<section class="page active" id="page-accueil">
+  <p class="eyebrow lang-fr">🧭 &middot; Qui je suis</p>
+  <p class="eyebrow lang-en">🧭 &middot; About</p>
+  <h2 class="section-title lang-fr">Data Scientist <em style="font-style:italic;color:var(--meridian-blue);">&amp; GenAI Engineer</em></h2>
+  <h2 class="section-title lang-en">Data Scientist <em style="font-style:italic;color:var(--meridian-blue);">&amp; GenAI Engineer</em></h2>
+
+  <div class="grid-2 justify-text" style="margin-top:var(--space-4);">
+    <div>
+      <p class="lang-fr">Tout commence à Cotonou, où je découvre l'économie et les statistiques à travers ma licence en statistiques économiques, que je conclus par un mémoire portant sur l'impact du cours mondial du coton sur la croissance du Bénin.</p>
+      <p class="lang-en">It all starts in Cotonou, where I discover economics and statistics through my degree in economic statistics, which I complete with a thesis on the impact of world cotton prices on Benin's growth.</p>
+
+      <p class="lang-fr">Ce goût pour la rigueur statistique me conduit en France, où j'obtiens en 2025 un Master en Mathématiques Appliquées et Statistique à Caen, avant de poursuivre un second diplôme en Data Science en Recherche Biomédicale à l'Université Paris-Saclay. Au fil de ce parcours, j'ai appris à concevoir des solutions data à grande échelle et à transformer les données en outils d'aide à la décision concrets.</p>
+      <p class="lang-en">That taste for statistical rigor brings me to France, where in 2025 I earn a Master's in Applied Mathematics and Statistics in Caen, before pursuing a second degree in Data Science for Biomedical Research at Université Paris-Saclay. Along the way, I learn to design large-scale data solutions and turn data into concrete decision-support tools.</p>
+    </div>
+    <div>
+      <p class="lang-fr">Chez le Groupe Carrefour France, j'ai optimisé des pipelines de données et des tableaux de bord pour un réseau de plus de 14 000 magasins.</p>
+      <p class="lang-en">At Carrefour Group France, I optimized data pipelines and dashboards for a network of over 14,000 stores.</p>
+
+      <p class="lang-fr">Aujourd'hui, je complète cette expertise par une formation continue en IA générative, en développant des projets end to end déployés en production. Animé par l'envie d'avoir un impact, je suis disponible immédiatement pour contribuer à des projets innovants en Data Science, Intelligence Artificielle ou Statistiques Appliquées, dans le cadre d'un CDI, d'un CDD ou d'un Graduate Program.</p>
+      <p class="lang-en">Today, I'm rounding out this expertise with ongoing training in generative AI, building end to end projects deployed to production. Driven by the desire to make an impact, I'm immediately available to contribute to innovative projects in Data Science, Artificial Intelligence or Applied Statistics, whether through a permanent role, fixed-term contract or Graduate Program.</p>
+    </div>
+  </div>
+
+  <div class="grid-3" style="margin-top:var(--space-5);">
+    <div class="card">
+      <p class="eyebrow">🇧🇯 <span class="lang-fr">Bénin</span><span class="lang-en">Benin</span></p>
+      <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Statistiques économiques, économétrie, prévisions macro.</p>
+      <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">Economic statistics, econometrics, macro forecasting.</p>
+    </div>
+    <div class="card">
+      <p class="eyebrow">🇫🇷 <span class="lang-fr">France</span><span class="lang-en">France</span></p>
+      <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Data Science, Big Data, biostatistique.</p>
+      <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">Data Science, Big Data, biostatistics.</p>
+    </div>
+    <div class="card">
+      <p class="eyebrow">🚀 <span class="lang-fr">Aujourd'hui</span><span class="lang-en">Today</span></p>
+      <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">6 projets ML/GenAI end-to-end déployés en production, en autonomie. Formation continue via le LLM Zoomcamp 2026 (DataTalks.Club).</p>
+      <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">6 end-to-end ML/GenAI projects deployed to production, self-directed. Ongoing training via the LLM Zoomcamp 2026 (DataTalks.Club).</p>
+    </div>
+  </div>
+
+  <p class="skill-cat-title lang-fr" style="margin-top:var(--space-5);">Qualités</p>
+  <p class="skill-cat-title lang-en" style="margin-top:var(--space-5);">Qualities</p>
+  <div class="sector-row">
+    <span class="pill gold lang-fr">Rigoureux</span><span class="pill gold lang-en">Rigorous</span>
+    <span class="pill gold lang-fr">Autonome</span><span class="pill gold lang-en">Autonomous</span>
+    <span class="pill gold lang-fr">Curieux</span><span class="pill gold lang-en">Curious</span>
+    <span class="pill gold lang-fr">Adaptable</span><span class="pill gold lang-en">Adaptable</span>
+    <span class="pill gold lang-fr">Multiculturel</span><span class="pill gold lang-en">Multicultural</span>
+    <span class="pill gold lang-fr">Persévérant</span><span class="pill gold lang-en">Persevering</span>
+    <span class="pill gold lang-fr">Esprit d'équipe</span><span class="pill gold lang-en">Team player</span>
+  </div>
+
+  <div class="quote-block">
+    <p class="quote-text lang-fr">« Ce ne sont pas les événements qui troublent les hommes, mais les jugements qu'ils portent sur eux. »</p>
+    <p class="quote-text lang-en">"Men are disturbed not by events, but by the opinions they hold about them."</p>
+    <p class="quote-author">&mdash; Épictète</p>
+  </div>
+</section>
+
+<!-- ============ PAGE 02 — PARCOURS ============ -->
+<section class="page" id="page-parcours">
+  <p class="eyebrow lang-fr">🗺️ &middot; Mon parcours</p>
+  <p class="eyebrow lang-en">🗺️ &middot; My journey</p>
+  <h2 class="section-title lang-fr">Un trajet, <em style="font-style:italic;color:var(--meridian-blue);">une méthode</em></h2>
+  <h2 class="section-title lang-en">One journey, <em style="font-style:italic;color:var(--meridian-blue);">one method</em></h2>
+  <p class="section-kicker lang-fr">Six ans, deux pays, une constante&nbsp;: la rigueur statistique appliquée à des questions de décision réelles.</p>
+  <p class="section-kicker lang-en">Six years, two countries, one constant: statistical rigor applied to real decision problems.</p>
+
+  <div class="timeline-wrap">
+    <div class="route-map">
+      <svg viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg">
+        <!-- schematic route: Cotonou -> Caen -> Île-de-France -->
+        <line x1="70" y1="360" x2="110" y2="200" stroke="#C98A2E" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <line x1="110" y1="200" x2="150" y2="130" stroke="#C98A2E" stroke-width="1.5" stroke-dasharray="3 4"/>
+
+        <circle cx="70" cy="360" r="5" fill="#EEF0EF"/>
+        <text x="82" y="358" class="radar-label" fill="#EEF0EF" font-size="9">Cotonou</text>
+        <text x="82" y="370" class="radar-label" fill="#2E8C82" font-size="7">6.36°N 2.42°E</text>
+
+        <circle cx="110" cy="200" r="5" fill="#EEF0EF"/>
+        <text x="122" y="198" class="radar-label" fill="#EEF0EF" font-size="9">Caen</text>
+        <text x="122" y="210" class="radar-label" fill="#2E8C82" font-size="7">49.18°N 0.37°W</text>
+
+        <circle cx="150" cy="130" r="6" fill="#C98A2E"/>
+        <text x="162" y="128" class="radar-label" fill="#EEF0EF" font-size="9">Île-de-France</text>
+        <text x="162" y="140" class="radar-label" fill="#2E8C82" font-size="7">48.85°N 2.35°E</text>
+      </svg>
+      <p class="route-caption lang-fr">Trajet principal &middot; Bénin &rarr; France</p>
+      <p class="route-caption lang-en">Main route &middot; Benin &rarr; France</p>
+    </div>
+
+    <div>
+      <div class="tl-entry">
+        <span class="coord tl-coord">Cotonou &amp; Porto-Novo, Bénin &middot; 2018&ndash;2021</span>
+        <h3 class="lang-fr">Racines statistiques au Bénin</h3>
+        <h3 class="lang-en">Statistical roots in Benin</h3>
+        <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Licence en statistiques économiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM), conclue par un mémoire sur l'impact du cours mondial du coton sur la croissance économique béninoise. Stage à la préfecture de Porto-Novo, puis à la Direction Générale des Affaires Économiques (DGAE) du ministère des Finances.</p>
+        <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">Degree in economic statistics at the École Nationale d'Économie Appliquée et de Management (ENEAM), completed with a thesis on the impact of world cotton prices on Benin's economic growth. Internship at the Porto-Novo Prefecture, then at the Directorate General of Economic Affairs (DGAE) of the Ministry of Finance.</p>
+      </div>
+
+      <div class="tl-entry">
+        <span class="coord tl-coord">Cotonou, Bénin &middot; 2021&ndash;2022</span>
+        <h3 class="lang-fr">Premiers pas professionnels</h3>
+        <h3 class="lang-en">First professional steps</h3>
+        <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Premier CDI en tant que statisticien, poste que je quitte après 10 mois, porté par la nécessité d'acquérir de nouvelles compétences, direction la France.</p>
+        <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">First permanent role as a statistician, a position I leave after 10 months, driven by the need to acquire new skills, heading to France.</p>
+      </div>
+
+      <div class="tl-entry">
+        <span class="coord tl-coord">France &middot; 2022</span>
+        <h3 class="lang-fr">France&nbsp;: en quête de nouvelles compétences</h3>
+        <h3 class="lang-en">France: in search of new skills</h3>
+        <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Le départ pour la France et la décision de reprendre les études pour élargir mes compétences en science des données&nbsp;: une certitude qui s'impose après avoir longtemps été une simple éventualité.</p>
+        <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">The move to France and the decision to go back to school to broaden my data science skills: a certainty that emerges after long being just a possibility.</p>
+      </div>
+
+      <div class="tl-entry">
+        <span class="coord tl-coord">Caen, France &middot; 2022&ndash;2025</span>
+        <h3 class="lang-fr">Université de Caen</h3>
+        <h3 class="lang-en">Université de Caen</h3>
+        <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Licence 3 Mathématiques Informatique Appliquées aux Sciences Humaines et Sociales (MIASHS), puis Master Mathématiques Appliquées &amp; Statistiques. Stage au laboratoire VERTEX du STAPS de Caen, puis CDD au sein du Groupe Carrefour France.</p>
+        <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">Bachelor's (L3) in Mathematics and Computer Science Applied to Social Sciences (MIASHS), then Master's in Applied Mathematics &amp; Statistics. Internship at the VERTEX lab (STAPS, Caen), then a fixed-term role at Carrefour Group France.</p>
+      </div>
+
+      <div class="tl-entry">
+        <span class="coord tl-coord">Île-de-France, France &middot; 2025&ndash;2026</span>
+        <h3 class="lang-fr">Université de Paris-Saclay</h3>
+        <h3 class="lang-en">Université Paris-Saclay</h3>
+        <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">Master 2 Méthodologie et Statistiques en Recherche Biomédicale, avec des projets de data science en santé et une méta-analyse end-to-end.</p>
+        <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">Master's in Biomedical Research Methodology &amp; Statistics, including health data-science projects and an end-to-end meta-analysis.</p>
+      </div>
+
+      <div class="tl-entry">
+        <span class="coord tl-coord" style="color:var(--ankara-gold);">Île-de-France, France &middot; 2025 &rarr; <span class="lang-fr">aujourd'hui</span><span class="lang-en">today</span></span>
+        <h3 class="lang-fr">Formation en intelligence artificielle</h3>
+        <h3 class="lang-en">Artificial intelligence training</h3>
+        <p class="lang-fr" style="font-size:0.92rem;color:var(--ink-70);">En parallèle, formation continue en IA générative et Machine Learning, avec plus de six projets end-to-end déjà déployés en production.</p>
+        <p class="lang-en" style="font-size:0.92rem;color:var(--ink-70);">In parallel, ongoing training in generative AI and Machine Learning, with more than six end-to-end projects already deployed to production.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="quote-block">
+    <p class="quote-text lang-fr">« L'obstacle sur le chemin devient le chemin. »</p>
+    <p class="quote-text lang-en">"The impediment to action advances action. What stands in the way becomes the way."</p>
+    <p class="quote-author">&mdash; Marc Aurèle</p>
+  </div>
+</section>
+
+<!-- ============ PAGE 03 — EXPÉRIENCES ============ -->
+<section class="page" id="page-experiences">
+  <p class="eyebrow lang-fr">💼 &middot; Expériences professionnelles</p>
+  <p class="eyebrow lang-en">💼 &middot; Professional experience</p>
+  <h2 class="section-title lang-fr">Sept missions, <em style="font-style:italic;color:var(--meridian-blue);">deux pays</em></h2>
+  <h2 class="section-title lang-en">Seven roles, <em style="font-style:italic;color:var(--meridian-blue);">two countries</em></h2>
+  <p class="section-kicker lang-fr">Classées de la plus récente à la plus ancienne.</p>
+  <p class="section-kicker lang-en">Listed from most recent to earliest.</p>
+
+  <div class="exp-card is-open">
+    <button class="exp-head" type="button" aria-expanded="true" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Data Analyst / Data Engineer</div>
+        <div class="exp-role lang-en">Data Analyst / Data Engineer</div>
+        <div class="exp-org">Carrefour Administratif France &middot; Mondeville</div>
+      </div>
+      <div class="exp-meta lang-fr">CDD &middot; mars&ndash;sept. 2025 (7 mois)</div>
+      <div class="exp-meta lang-en">Fixed-term &middot; Mar&ndash;Sep 2025 (7 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Au sein du service Référentiel de la Direction Record to Report (R2R), j'ai contribué à la transformation digitale des processus de gestion des données de référence (Master Data Management) de Carrefour France, dans un environnement Big Data à grande échelle (14&nbsp;000 points de vente).</p>
+    <p class="lang-en" style="font-size:0.9rem;">Within the Référentiel team of the Record to Report (R2R) Division, I contributed to the digital transformation of Carrefour France's Master Data Management processes, in a large-scale Big Data environment (14,000 stores).</p>
+
+    <p class="exp-subhead lang-fr">Automatisation &amp; Data Engineering</p>
+    <p class="exp-subhead lang-en">Automation &amp; Data Engineering</p>
+    <ul class="exp-list lang-fr">
+      <li>Conception et déploiement d'un processus d'automatisation end-to-end (AppSheet &rarr; Google Sheets &rarr; Apps Script &rarr; Nexus) pour le traitement des demandes de paramétrage des référentiels, en production et utilisé quotidiennement par l'équipe</li>
+      <li>Développement de macros Google Apps Script (JavaScript) générant automatiquement des scripts Nexus (.srl), avec délais de traitement réduits de <span class="stat-highlight">40%</span> et erreurs manuelles réduites de <span class="stat-highlight">99%</span></li>
+      <li>Mise en place d'un système de nommage intelligent et d'archivage automatique sur Google Drive pour garantir la traçabilité</li>
+      <li>Itération en 3 cycles de R&amp;D pour aboutir à la solution optimale&nbsp;: diagnostic du processus existant (VBA/Excel legacy), deux approches testées, solution finale validée et mise en production</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Design and deployment of an end-to-end automation process (AppSheet &rarr; Google Sheets &rarr; Apps Script &rarr; Nexus) for handling reference-data configuration requests, now in production and used daily by the team</li>
+      <li>Development of Google Apps Script (JavaScript) macros automatically generating Nexus scripts (.srl), cutting processing delays by <span class="stat-highlight">40%</span> and manual errors by <span class="stat-highlight">99%</span></li>
+      <li>Implementation of a smart naming and automatic archiving system on Google Drive to ensure traceability</li>
+      <li>Three R&amp;D iteration cycles to reach the optimal solution: diagnosis of the legacy process (VBA/Excel), two approaches tested, final solution validated and shipped to production</li>
+    </ul>
+
+    <p class="exp-subhead lang-fr">Data Analysis &amp; Dashboards</p>
+    <p class="exp-subhead lang-en">Data Analysis &amp; Dashboards</p>
+    <ul class="exp-list lang-fr">
+      <li>Requêtage et exploitation des données du datalake Phénix via BigQuery (Darwin), sur des tables de plusieurs centaines de colonnes et millions de lignes</li>
+      <li>Création de tables consolidées et historisées dans BigQuery (requêtes SQL planifiées) pour alimenter des dashboards interactifs Looker Studio</li>
+      <li>Conception de KPI métiers&nbsp;: suivi des anomalies, délais de traitement, évolution du parc de magasins par région/enseigne, ouvertures de points de vente</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Querying and processing the Phénix datalake via BigQuery (Darwin), on tables with several hundred columns and millions of rows</li>
+      <li>Building consolidated, historized tables in BigQuery (scheduled SQL queries) to feed interactive Looker Studio dashboards</li>
+      <li>Designing business KPIs: anomaly tracking, processing delays, store network evolution by region/banner, store openings</li>
+    </ul>
+
+    <div class="project-tags">
+      <span class="pill">GCP</span><span class="pill">BigQuery</span><span class="pill">SQL</span><span class="pill">Google Apps Script</span><span class="pill">AppSheet</span><span class="pill">Looker Studio</span><span class="pill">Oracle IR</span><span class="pill">Excel VBA</span><span class="pill">Nexus Terminal</span>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card is-open">
+    <button class="exp-head" type="button" aria-expanded="true" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Data Scientist &middot; Analyse Biostatistique &amp; Modélisation Physiologique</div>
+        <div class="exp-role lang-en">Data Scientist &middot; Biostatistical Analysis &amp; Physiological Modeling</div>
+        <div class="exp-org">Laboratoire VERTEX (mission Deep Climate) &middot; Caen</div>
+      </div>
+      <div class="exp-meta lang-fr">CDD &middot; juil.&ndash;sept. 2024 (3 mois)</div>
+      <div class="exp-meta lang-en">Fixed-term &middot; Jul&ndash;Sep 2024 (3 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Dans le cadre de la mission scientifique Deep Climate, j'ai analysé les données physiologiques de 20 sujets exposés à des milieux extrêmes, Laponie (&minus;20°C) et Arabie Saoudite (+45°C), sur une période de 40 jours, avec mesure continue de la température centrale via capsule ingérée (BodyCap e-Celsius, une mesure par minute).</p>
+    <p class="lang-en" style="font-size:0.9rem;">As part of the Deep Climate scientific mission, I analyzed physiological data from 20 subjects exposed to extreme environments, Lapland (&minus;20°C) and Saudi Arabia (+45°C), over 40 days, with continuous core-temperature monitoring via an ingestible capsule (BodyCap e-Celsius, one reading per minute).</p>
+
+    <p class="exp-subhead lang-fr">Analyse exploratoire &amp; traitement des données</p>
+    <p class="exp-subhead lang-en">Exploratory Analysis &amp; Data Processing</p>
+    <ul class="exp-list lang-fr">
+      <li>Nettoyage, structuration et imputation des données manquantes par interpolation spline sur séries temporelles haute fréquence</li>
+      <li>Segmentation temporelle en blocs d'analyse et visualisation des dynamiques d'acclimatation sujet par sujet (ggplot2)</li>
+      <li>Corrélation entre température corporelle et température extérieure pour évaluer l'indépendance thermique comme marqueur d'acclimatation</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Cleaning, structuring, and imputing missing data via spline interpolation on high-frequency time series</li>
+      <li>Time segmentation into analysis blocks and subject-by-subject visualization of acclimatization dynamics (ggplot2)</li>
+      <li>Correlating core and ambient temperature to assess thermal independence as an acclimatization marker</li>
+    </ul>
+
+    <p class="exp-subhead lang-fr">Modélisation statistique &amp; prédictive</p>
+    <p class="exp-subhead lang-en">Statistical &amp; Predictive Modeling</p>
+    <ul class="exp-list lang-fr">
+      <li>Développement de modèles de régression pour anticiper l'évolution thermique des sujets et évaluer leur indépendance thermique face à l'environnement</li>
+      <li>Tests statistiques Shapiro-Wilk (normalité), Levene (homogénéité des variances), ANOVA avec post-hoc pour comparer les groupes acclimatés vs non acclimatés</li>
+      <li>Étude de l'influence des variables anthropométriques (âge, poids, taille) sur la capacité d'acclimatation</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Regression models to anticipate subjects' thermal evolution and assess their thermal independence from the environment</li>
+      <li>Shapiro-Wilk (normality), Levene (variance homogeneity), and post-hoc ANOVA tests to compare acclimatized vs non-acclimatized groups</li>
+      <li>Study of anthropometric variables (age, weight, height) influencing acclimatization capacity</li>
+    </ul>
+
+    <p class="exp-subhead lang-fr">Restitution scientifique</p>
+    <p class="exp-subhead lang-en">Scientific Reporting</p>
+    <ul class="exp-list lang-fr">
+      <li>Production de visualisations dynamiques et de tableaux d'interprétation par bloc et par sujet</li>
+      <li>Présentation des résultats au comité scientifique du laboratoire VERTEX</li>
+      <li>Mise en évidence d'une capacité d'acclimatation supérieure au froid par rapport au chaud</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Dynamic visualizations and interpretation tables by block and by subject</li>
+      <li>Results presented to the VERTEX lab's scientific committee</li>
+      <li>Finding: acclimatization capacity is stronger for cold than for heat</li>
+    </ul>
+
+    <div class="project-tags"><span class="pill">R</span><span class="pill">tidyverse</span><span class="pill">ggplot2</span><span class="pill">lubridate</span><span class="pill">zoo</span><span class="pill">car</span><span class="pill">Excel</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <button class="exp-head" type="button" aria-expanded="false" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Data Scientist &middot; Analyse de la Performance Sportive</div>
+        <div class="exp-role lang-en">Data Scientist &middot; Sports Performance Analysis</div>
+        <div class="exp-org">Projet Trail Scientifique de Clécy &middot; Caen</div>
+      </div>
+      <div class="exp-meta lang-fr">Stage &middot; mai&ndash;juin 2024 (2 mois)</div>
+      <div class="exp-meta lang-en">Internship &middot; May&ndash;Jun 2024 (2 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Analyse statistique de l'impact physiologique du trail sur un panel de 55 athlètes (13 femmes, 42 hommes, 25 à 63 ans) sur un parcours de 6&times;26 km avec 1&nbsp;000 m de dénivelé positif par tour, dont 14 abandons en cours de course.</p>
+    <p class="lang-en" style="font-size:0.9rem;">Statistical analysis of the physiological impact of trail running on a panel of 55 athletes (13 women, 42 men, aged 25 to 63) over a 6&times;26 km course with 1,000 m of elevation gain per lap, including 14 DNFs.</p>
+
+    <p class="exp-subhead lang-fr">Traitement des données &amp; analyse comparative</p>
+    <p class="exp-subhead lang-en">Data Processing &amp; Comparative Analysis</p>
+    <ul class="exp-list lang-fr">
+      <li>Nettoyage, structuration et intégration de données multi-sources et multi-temporelles&nbsp;: vitesse de course, fréquence cardiaque (Hexoskin), force musculaire (détente verticale, handgrip, extenseurs du genou)</li>
+      <li>Calcul d'indicateurs dérivés&nbsp;: indice de pacing, % FC maximale tour par tour, zones d'intensité cardiaque (Z0&ndash;Z5, formule de Karvonen), FC de réserve</li>
+      <li>Analyse des variations pré/post-course des paramètres physiologiques (température, glycémie) pour évaluer le stress biologique</li>
+      <li>Tests de comparaison de moyennes et de variances (Student, Wilcoxon) et tests de normalité pour valider la significativité des résultats</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Cleaning, structuring, and integrating multi-source, multi-timepoint data: running speed, heart rate (Hexoskin), muscular strength (vertical jump, handgrip, knee extensors)</li>
+      <li>Derived indicators: pacing index, % max heart rate per lap, heart-rate intensity zones (Z0&ndash;Z5, Karvonen formula), heart-rate reserve</li>
+      <li>Pre/post-race variation analysis of physiological parameters (temperature, blood glucose) to assess biological stress</li>
+      <li>Mean and variance comparison tests (Student, Wilcoxon) and normality tests to validate result significance</li>
+    </ul>
+
+    <p class="exp-subhead lang-fr">Modélisation &amp; interprétation</p>
+    <p class="exp-subhead lang-en">Modeling &amp; Interpretation</p>
+    <ul class="exp-list lang-fr">
+      <li>Corrélation entre les données d'entraînement et les marqueurs de fatigue post-effort</li>
+      <li>Graphiques comparatifs pour visualiser l'impact de l'effort par groupe d'athlètes (finisseurs vs non-finisseurs)</li>
+      <li>Modèles de régression et modèles mixtes pour analyser la cinétique des facteurs de performance au fil des tours</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Correlating training data with post-effort fatigue markers</li>
+      <li>Comparative charts to visualize the impact of effort by athlete group (finishers vs non-finishers)</li>
+      <li>Regression and mixed models to analyze the kinetics of performance factors across laps</li>
+    </ul>
+
+    <div class="project-tags"><span class="pill">R</span><span class="pill">tidyverse</span><span class="pill">ggplot2</span><span class="pill">lme4</span><span class="pill">Statistiques inférentielles</span><span class="pill">Excel</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <button class="exp-head" type="button" aria-expanded="false" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Chargé d'étude Statistique &middot; Analyse de fraude</div>
+        <div class="exp-role lang-en">Statistical Analyst &middot; Fraud Analysis</div>
+        <div class="exp-org">TEST-SA &middot; Caen</div>
+      </div>
+      <div class="exp-meta lang-fr">CDD &middot; nov. 2022 (1 mois)</div>
+      <div class="exp-meta lang-en">Fixed-term &middot; Nov 2022 (1 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Enquête fraude sur le réseau de mobilité de Caen (Twisto), menée par questionnaire sur tablette.</p>
+    <p class="lang-en" style="font-size:0.9rem;">Fraud investigation on Caen's public transit network (Twisto), conducted via tablet-based questionnaires.</p>
+    <ul class="exp-list lang-fr">
+      <li>Traitement puis analyse des données collectées</li>
+      <li>Analyse comportementale pour identifier des profils à risque</li>
+      <li>Construction d'un score de détection de fraude et segmentation de populations</li>
+      <li>Production de reporting analytique</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Processing and analysis of the collected data</li>
+      <li>Behavioral analysis to identify at-risk profiles</li>
+      <li>Building a fraud-detection score and population segmentation</li>
+      <li>Analytical reporting</li>
+    </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <button class="exp-head" type="button" aria-expanded="false" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Statisticien</div>
+        <div class="exp-role lang-en">Statistician</div>
+        <div class="exp-org">SCI Dar El Salam &middot; Cotonou, Bénin</div>
+      </div>
+      <div class="exp-meta lang-fr">CDI &middot; oct. 2021&ndash;août 2022 (11 mois)</div>
+      <div class="exp-meta lang-en">Permanent &middot; Oct 2021&ndash;Aug 2022 (11 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Polyvalence et autonomie en contexte entrepreneurial, avec des missions transverses bien au-delà de la donnée pure.</p>
+    <p class="lang-en" style="font-size:0.9rem;">Versatility and autonomy in an entrepreneurial context, with cross-functional missions well beyond pure data work.</p>
+    <ul class="exp-list lang-fr">
+      <li>Exploration et gestion des données clients</li>
+      <li>Conception de tables de suivi des biens immobiliers de l'entreprise</li>
+      <li>Élaboration de factures et rédaction de courriers</li>
+      <li>Supervision des travaux sur les chantiers en construction</li>
+      <li>États des lieux d'entrée et de sortie des biens en location</li>
+      <li>Gestion des opérations bancaires de l'entreprise</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Client data exploration and management</li>
+      <li>Designing tracking tables for the company's real-estate holdings</li>
+      <li>Invoicing and correspondence drafting</li>
+      <li>Supervising work on construction sites</li>
+      <li>Move-in/move-out inspections for rental properties</li>
+      <li>Managing the company's banking operations</li>
+    </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <button class="exp-head" type="button" aria-expanded="false" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Statisticien Économiste &middot; Analyse Macro-économique &amp; Prévisions</div>
+        <div class="exp-role lang-en">Economic Statistician &middot; Macroeconomic Analysis &amp; Forecasting</div>
+        <div class="exp-org">DGAE, Direction Générale des Affaires Économiques &middot; Cotonou, Bénin</div>
+      </div>
+      <div class="exp-meta lang-fr">Stage &middot; août&ndash;nov. 2020 (4 mois)</div>
+      <div class="exp-meta lang-en">Internship &middot; Aug&ndash;Nov 2020 (4 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Analyse de l'impact des chocs de prix des matières premières (coton) sur la croissance économique nationale.</p>
+    <p class="lang-en" style="font-size:0.9rem;">Analysis of the impact of commodity (cotton) price shocks on national economic growth.</p>
+
+    <p class="exp-subhead lang-fr">Études économétriques &amp; modélisation</p>
+    <p class="exp-subhead lang-en">Econometric Studies &amp; Modeling</p>
+    <ul class="exp-list lang-fr">
+      <li>Conception de modèles de prévision des cours mondiaux du coton à l'horizon 2021&ndash;2031, via des méthodes économétriques</li>
+      <li>Analyses factorielles (ACP) pour comprendre les corrélations entre les agrégats macroéconomiques du Bénin</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Designing forecasting models for world cotton prices through 2031, using econometric methods</li>
+      <li>Factorial analyses (PCA) to understand correlations between Benin's macroeconomic aggregates</li>
+    </ul>
+
+    <p class="exp-subhead lang-fr">Data management &amp; qualité</p>
+    <p class="exp-subhead lang-en">Data Management &amp; Quality</p>
+    <ul class="exp-list lang-fr">
+      <li>Exploration, extraction et structuration des bases de données nationales</li>
+      <li>Détection et correction des valeurs aberrantes, gestion des données manquantes, pour garantir la fiabilité des prévisions budgétaires</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Exploring, extracting, and structuring national databases</li>
+      <li>Detecting and correcting outliers, handling missing data, to ensure the reliability of budget forecasts</li>
+    </ul>
+
+    <p class="exp-subhead lang-fr">Restitution stratégique</p>
+    <p class="exp-subhead lang-en">Strategic Reporting</p>
+    <ul class="exp-list lang-fr">
+      <li>Rédaction de rapports d'aide à la décision et suivi des indicateurs de performance sectorielle</li>
+      <li>Présentation des résultats aux instances de pilotage économique</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Writing decision-support reports and tracking sector performance indicators</li>
+      <li>Presenting results to economic steering bodies</li>
+    </ul>
+
+    <div class="project-tags"><span class="pill">Stata</span><span class="pill">R</span><span class="pill">SPSS</span><span class="pill">Excel</span><span class="pill">Économétrie</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <button class="exp-head" type="button" aria-expanded="false" onclick="toggleExpCard(this)">
+      <div>
+        <div class="exp-role lang-fr">Assistant responsable administratif</div>
+        <div class="exp-role lang-en">Administrative Assistant</div>
+        <div class="exp-org">Préfecture de Porto-Novo, Bénin</div>
+      </div>
+      <div class="exp-meta lang-fr">Stage &middot; sept.&ndash;oct. 2019 (2 mois)</div>
+      <div class="exp-meta lang-en">Internship &middot; Sep&ndash;Oct 2019 (2 mo.)</div>
+      <span class="exp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="exp-body-wrap">
+      <div class="exp-body">
+    <p class="lang-fr" style="font-size:0.9rem;">Premiers pas professionnels&nbsp;: gestion administrative, rédaction de courriers, archivage.</p>
+    <p class="lang-en" style="font-size:0.9rem;">First professional steps: administrative management, correspondence, filing.</p>
+    <ul class="exp-list lang-fr">
+      <li>Réception de courriers et d'appels téléphoniques</li>
+      <li>Rédaction de courriers administratifs</li>
+      <li>Enregistrement et archivage de documents</li>
+      <li>Rédaction de comptes-rendus de réunion</li>
+    </ul>
+    <ul class="exp-list lang-en">
+      <li>Handling incoming mail and phone calls</li>
+      <li>Drafting administrative correspondence</li>
+      <li>Recording and archiving documents</li>
+      <li>Writing meeting minutes</li>
+    </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-other" style="margin-top:var(--space-4);">
+    <div class="exp-other-item">
+      <div class="exp-role lang-fr">Équipier polyvalent</div>
+      <div class="exp-role lang-en">Crew Member</div>
+      <div class="exp-org">McDonald's</div>
+      <span class="exp-meta lang-fr">Job étudiant &middot; 2022&ndash;2025</span>
+      <span class="exp-meta lang-en">Student job &middot; 2022&ndash;2025</span>
+    </div>
+    <div class="exp-other-item">
+      <div class="exp-role lang-fr">Employé libre-service</div>
+      <div class="exp-role lang-en">Store Associate</div>
+      <div class="exp-org">Leclerc</div>
+      <span class="exp-meta lang-fr">Job étudiant &middot; 6 mois (2024)</span>
+      <span class="exp-meta lang-en">Student job &middot; 6 months (2024)</span>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p class="quote-text lang-fr">« L'expérience de chacun est sa vérité. »</p>
+    <p class="quote-text lang-en">"Everyone's experience is their own truth."</p>
+    <p class="quote-author">&mdash; Mourad Do Rego</p>
+  </div>
+</section>
+
+<!-- ============ PAGE 04 — PROJETS ============ -->
+<section class="page" id="page-projets">
+  <p class="eyebrow lang-fr">🧪 &middot; Projets</p>
+  <p class="eyebrow lang-en">🧪 &middot; Projects</p>
+  <h2 class="section-title lang-fr">Du modèle <em style="font-style:italic;color:var(--meridian-blue);">à la production</em></h2>
+  <h2 class="section-title lang-en">From model <em style="font-style:italic;color:var(--meridian-blue);">to production</em></h2>
+  <p class="section-kicker lang-fr">Code, notebooks documentés et démos déployées sur <a href="https://github.com/Dboy003" target="_blank" style="color:var(--meridian-blue);">github.com/Dboy003</a>.</p>
+  <p class="section-kicker lang-en">Code, documented notebooks and live demos on <a href="https://github.com/Dboy003" target="_blank" style="color:var(--meridian-blue);">github.com/Dboy003</a>.</p>
+
+  <div class="project-group-title">
+    <span class="eyebrow lang-fr">Machine Learning &amp; GenAI</span>
+    <span class="eyebrow lang-en">Machine Learning &amp; GenAI</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Fraud Detection Banking</h3>
+      <div class="project-metric">Recall 78.9% &middot; Precision 94.9% &middot; AUC-ROC 0.967</div>
+      <p class="project-desc lang-fr">Système end-to-end de détection de fraude bancaire, du modèle au déploiement cloud complet. XGBoost + SMOTE sur 284 807 transactions (0.17% de fraude). API FastAPI (Render), cache Redis (Upstash), monitoring Prometheus + Grafana Cloud en production.</p>
+      <p class="project-desc lang-en">End-to-end banking fraud detection system, from the model to full cloud deployment. XGBoost + SMOTE on 284,807 transactions (0.17% fraud). FastAPI API (Render), Redis cache (Upstash), Prometheus + Grafana Cloud monitoring in production.</p>
+      <div class="project-tags"><span class="pill">XGBoost</span><span class="pill">FastAPI</span><span class="pill">Docker</span><span class="pill teal">Grafana Cloud</span></div>
+      <div class="project-links">
+        <a href="https://github.com/Dboy003/fraud-detection-banking" target="_blank">GitHub</a>
+        <a class="live" href="https://fraud-detection-banking-x3s8.onrender.com/docs" target="_blank">Swagger</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Biomedical RAG-LLM</h3>
+      <div class="project-metric">RAGAS 0.792</div>
+      <p class="project-desc lang-fr">Assistant IA capable d'explorer la littérature scientifique sur la santé mentale des jeunes diplômés en recherche d'emploi. Système de question-réponse ancré sur PubMed. LangChain + ChromaDB + Llama 3.3 70B (Groq).</p>
+      <p class="project-desc lang-en">AI assistant that explores the scientific literature on the mental health of recent graduates job-hunting. PubMed-grounded question-answering system. LangChain + ChromaDB + Llama 3.3 70B (Groq).</p>
+      <div class="project-tags"><span class="pill gold">LangChain</span><span class="pill gold">RAG</span><span class="pill">ChromaDB</span></div>
+      <div class="project-links"><a href="https://github.com/Dboy003/biomedical-rag-llm" target="_blank">GitHub</a></div>
+    </div>
+
+    <div class="project-card">
+      <h3>Churn Prediction Telecom</h3>
+      <div class="project-metric">Recall 81.6% &middot; AUC 0.825</div>
+      <p class="project-desc lang-fr">XGBoost, seuil optimisé sur validation set, explicabilité SHAP. FastAPI + Streamlit + Docker.</p>
+      <p class="project-desc lang-en">XGBoost, threshold optimized on validation set, SHAP explainability. FastAPI + Streamlit + Docker.</p>
+      <div class="project-tags"><span class="pill">XGBoost</span><span class="pill">SHAP</span><span class="pill">Streamlit</span></div>
+      <div class="project-links"><a href="https://github.com/Dboy003/churn-prediction-telecom" target="_blank">GitHub</a><a class="live" href="https://churn-prediction-telecom-dboy003.streamlit.app/" target="_blank">Streamlit</a></div>
+    </div>
+
+    <div class="project-card">
+      <h3 class="lang-fr">Optimisation Tarifaire E-commerce</h3>
+      <h3 class="lang-en">E-commerce Pricing Optimization</h3>
+      <div class="project-metric lang-fr">+18.7% de revenu potentiel</div>
+      <div class="project-metric lang-en">+18.7% potential revenue</div>
+      <p class="project-desc lang-fr">Dataset Olist, imputation MICE, simulation Monte Carlo, dashboard Power BI.</p>
+      <p class="project-desc lang-en">Olist dataset, MICE imputation, Monte Carlo simulation, Power BI dashboard.</p>
+      <div class="project-tags"><span class="pill">pandas</span><span class="pill">Monte Carlo</span><span class="pill">Power BI</span></div>
+      <div class="project-links"><a href="https://github.com/Dboy003/Ecommerce-pricing" target="_blank">GitHub</a></div>
+    </div>
+
+    <div class="project-card">
+      <h3 class="lang-fr">Prévision de Consommation Énergétique (PJM Est, USA)</h3>
+      <h3 class="lang-en">Energy Consumption Forecasting (PJM East, USA)</h3>
+      <div class="project-metric">MAPE 0.74%</div>
+      <p class="project-desc lang-fr">XGBoost, intervalles de prédiction conformes. FastAPI (Render) + Streamlit Cloud.</p>
+      <p class="project-desc lang-en">XGBoost, conformal prediction intervals. FastAPI (Render) + Streamlit Cloud.</p>
+      <div class="project-tags"><span class="pill">XGBoost</span><span class="pill">Conformal Prediction</span></div>
+      <div class="project-links"><a href="https://github.com/Dboy003/Energy-forecasting" target="_blank">GitHub</a><a class="live" href="https://energy-forecasting-j2sfchqxzzpwwewckuivby.streamlit.app/" target="_blank">Streamlit</a></div>
+    </div>
+
+    <div class="project-card">
+      <h3 class="lang-fr">Analyse de Sentiment NLP</h3>
+      <h3 class="lang-en">NLP Sentiment Analysis</h3>
+      <div class="project-metric">85.13% accuracy</div>
+      <p class="project-desc lang-fr">Pipeline NLP end-to-end pour extraire automatiquement les points positifs et négatifs de 568 454 avis clients Amazon. LinearSVC sur Amazon Fine Food Reviews, TF-IDF + LDA, dashboard Streamlit.</p>
+      <p class="project-desc lang-en">End-to-end NLP pipeline to automatically extract positive and negative points from 568,454 Amazon customer reviews. LinearSVC on Amazon Fine Food Reviews, TF-IDF + LDA, Streamlit dashboard.</p>
+      <div class="project-tags"><span class="pill">LinearSVC</span><span class="pill">TF-IDF</span><span class="pill">LDA</span></div>
+      <div class="project-links"><a href="https://github.com/Dboy003/Analyse-sentiment-NLP" target="_blank">GitHub</a><a class="live" href="https://analyse-sentiment-nlp-9hb4rudvsmrpva6wjswohn.streamlit.app/" target="_blank">Streamlit</a></div>
+    </div>
+  </div>
+
+  <div class="live-embed-wrap">
+    <div class="live-embed-head lang-fr">Dashboard de monitoring en direct &mdash; Fraud Detection Banking</div>
+    <div class="live-embed-head lang-en">Live monitoring dashboard &mdash; Fraud Detection Banking</div>
+    <div class="live-embed-cta">
+      <p class="lang-fr">Grafana Cloud bloque l'intégration directe de ce dashboard sur un site externe. Il reste consultable en direct, avec les métriques réelles du service en production.</p>
+      <p class="lang-en">Grafana Cloud blocks direct embedding of this dashboard on an external site. It remains viewable live, with real metrics from the production service.</p>
+      <a class="live-embed-link" href="https://purpleboxwood1448.grafana.net/public-dashboards/892deb5c32fc45a18c7308d69f0e716c" target="_blank" rel="noopener">
+        <span class="lang-fr">Ouvrir le dashboard Grafana &rarr;</span>
+        <span class="lang-en">Open the Grafana dashboard &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p class="quote-text lang-fr">« Ce n'est pas parce que les choses sont difficiles que nous n'osons pas, c'est parce que nous n'osons pas qu'elles sont difficiles. »</p>
+    <p class="quote-text lang-en">"It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult."</p>
+    <p class="quote-author">&mdash; Sénèque</p>
+  </div>
+
+  <div class="project-group-title">
+    <span class="eyebrow lang-fr">Projets académiques &mdash; Biostatistique (Master 2, Paris-Saclay)</span>
+    <span class="eyebrow lang-en">Academic projects &mdash; Biostatistics (Master's, Paris-Saclay)</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card academic">
+      <h3 class="lang-fr">Plan d'Analyse Statistique &mdash; Étude Post-Polio</h3>
+      <h3 class="lang-en">Statistical Analysis Plan &mdash; Post-Polio Study</h3>
+      <p class="project-desc lang-fr">Rédaction complète d'un protocole d'analyse pour un essai clinique&nbsp;: objectifs, calcul de population, critères de sécurité, randomisation, aveugle.</p>
+      <p class="project-desc lang-en">Full analysis protocol for a clinical trial: objectives, sample size, safety criteria, randomization, blinding.</p>
+      <div class="project-tags"><span class="pill">R</span><span class="pill">Essais cliniques</span></div>
+      <div class="project-links"><a href="assets/docs/plan-analyse-statistique-post-polio.pdf" target="_blank">
+        <span class="lang-fr">Consulter le document</span>
+        <span class="lang-en">View document</span>
+      </a></div>
+    </div>
+
+    <div class="project-card academic">
+      <h3 class="lang-fr">Épidémiologie Interventionnelle &mdash; Efficacité du RHC en Réanimation</h3>
+      <h3 class="lang-en">Interventional Epidemiology &mdash; Swan-Ganz Catheter Efficacy in ICU</h3>
+      <p class="project-desc lang-fr">Impact de la sonde de Swan-Ganz sur la survie à J30 en réanimation. Score de propension (appariement, IPTW), analyse de survie (Kaplan-Meier, Log-Rank).</p>
+      <p class="project-desc lang-en">Impact of the Swan-Ganz catheter on day-30 ICU survival. Propensity scoring (matching, IPTW), survival analysis (Kaplan-Meier, Log-Rank).</p>
+      <div class="project-tags"><span class="pill">R</span><span class="pill">Score de propension</span><span class="pill">Kaplan-Meier</span></div>
+      <div class="project-links"><a href="assets/docs/epidemiologie-interventionnelle-rhc-reanimation.pdf" target="_blank">
+        <span class="lang-fr">Consulter le document</span>
+        <span class="lang-en">View document</span>
+      </a></div>
+    </div>
+
+    <div class="project-card academic">
+      <h3 class="lang-fr">Psychométrie &amp; Données Longitudinales &mdash; Échelle d'Hamilton</h3>
+      <h3 class="lang-en">Psychometrics &amp; Longitudinal Data &mdash; Hamilton Scale</h3>
+      <p class="project-desc lang-fr">Structure dimensionnelle et consistance interne d'une échelle de dépression. Alpha de Cronbach, modèles mixtes, gestion des données manquantes (LOCF).</p>
+      <p class="project-desc lang-en">Dimensional structure and internal consistency of a depression scale. Cronbach's alpha, mixed models, missing-data handling (LOCF).</p>
+      <div class="project-tags"><span class="pill">R</span><span class="pill">Modèles mixtes</span></div>
+      <p class="confidential-note lang-fr">Document académique confidentiel &mdash; disponible sur demande en entretien.</p>
+      <p class="confidential-note lang-en">Confidential academic document &mdash; available on request during interview.</p>
+    </div>
+
+    <div class="project-card academic">
+      <h3 class="lang-fr">Modélisation Prédictive &mdash; Déterminants du Rétinol Plasmatique</h3>
+      <h3 class="lang-en">Predictive Modeling &mdash; Plasma Retinol Determinants</h3>
+      <p class="project-desc lang-fr">Identification des facteurs influençant les niveaux de vitamines. Régression logistique, sélection de variables (AIC), gestion des interactions.</p>
+      <p class="project-desc lang-en">Identifying factors influencing vitamin levels. Logistic regression, variable selection (AIC), interaction handling.</p>
+      <div class="project-tags"><span class="pill">R</span><span class="pill">Régression logistique</span></div>
+      <p class="confidential-note lang-fr">Document académique confidentiel &mdash; disponible sur demande en entretien.</p>
+      <p class="confidential-note lang-en">Confidential academic document &mdash; available on request during interview.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 05 — COMPÉTENCES ============ -->
+<section class="page" id="page-competences">
+  <p class="eyebrow lang-fr">🛠️ &middot; Compétences</p>
+  <p class="eyebrow lang-en">🛠️ &middot; Skills</p>
+  <h2 class="section-title lang-fr">Outils <em style="font-style:italic;color:var(--meridian-blue);">&amp; savoir-faire</em></h2>
+  <h2 class="section-title lang-en">Tools <em style="font-style:italic;color:var(--meridian-blue);">&amp; expertise</em></h2>
+
+  <div class="skills-top">
+    <div class="radar-wrap">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- axes: ML, GenAI, MLOps, Biostat, DataEng, BI — hexagon -->
+        <g stroke-width="1">
+          <polygon points="150,30 245,90 245,210 150,270 55,210 55,90" class="radar-axis" fill="none"/>
+          <polygon points="150,70 210,110 210,190 150,230 90,190 90,110" class="radar-axis" fill="none"/>
+          <polygon points="150,110 175,130 175,170 150,190 125,170 125,130" class="radar-axis" fill="none"/>
+        </g>
+        <polygon points="150,40 228,95 220,205 150,255 75,195 65,100" class="radar-shape"/>
+        <text x="150" y="20" text-anchor="middle" class="radar-label">ML</text>
+        <text x="258" y="90" text-anchor="start" class="radar-label">GenAI</text>
+        <text x="258" y="215" text-anchor="start" class="radar-label">MLOps</text>
+        <text x="150" y="288" text-anchor="middle" class="radar-label">Biostat</text>
+        <text x="42" y="215" text-anchor="end" class="radar-label">Data Eng</text>
+        <text x="42" y="90" text-anchor="end" class="radar-label">BI</text>
+      </svg>
+    </div>
+
+    <div>
+      <div class="grid-2">
+        <div>
+          <p class="skill-cat-title lang-fr">Modélisation &amp; ML</p>
+          <p class="skill-cat-title lang-en">Modeling &amp; ML</p>
+          <div class="skill-badge-grid">
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" onerror="iconFallback(this,'Py')"></span>
+              <span class="skill-badge-label">Python</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="scikit-learn" onerror="iconFallback(this,'skl')"></span>
+              <span class="skill-badge-label">scikit-learn</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">XGB</span>
+              <span class="skill-badge-label">XGBoost</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" onerror="iconFallback(this,'R')"></span>
+              <span class="skill-badge-label">R</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">SAS</span>
+              <span class="skill-badge-label">SAS &middot; Stata &middot; SPSS</span>
+            </div>
+          </div>
+
+          <p class="skill-cat-title lang-fr">GenAI &amp; NLP</p>
+          <p class="skill-cat-title lang-en">GenAI &amp; NLP</p>
+          <div class="skill-badge-grid">
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">LC</span>
+              <span class="skill-badge-label">LangChain</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">RAG</span>
+              <span class="skill-badge-label">RAG</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">Chr</span>
+              <span class="skill-badge-label">ChromaDB</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">Lla</span>
+              <span class="skill-badge-label">Llama (Groq)</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="skill-cat-title lang-fr">MLOps &amp; Déploiement</p>
+          <p class="skill-cat-title lang-en">MLOps &amp; Deployment</p>
+          <div class="skill-badge-grid">
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" onerror="iconFallback(this,'API')"></span>
+              <span class="skill-badge-label">FastAPI</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" onerror="iconFallback(this,'Dkr')"></span>
+              <span class="skill-badge-label">Docker</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" onerror="iconFallback(this,'Rds')"></span>
+              <span class="skill-badge-label">Redis</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus" onerror="iconFallback(this,'Prm')"></span>
+              <span class="skill-badge-label">Prometheus</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" onerror="iconFallback(this,'Grf')"></span>
+              <span class="skill-badge-label">Grafana</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit" onerror="iconFallback(this,'St')"></span>
+              <span class="skill-badge-label">Streamlit</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" onerror="iconFallback(this,'Git')"></span>
+              <span class="skill-badge-label">Git</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" onerror="iconFallback(this,'Hub')"></span>
+              <span class="skill-badge-label">GitHub</span>
+            </div>
+          </div>
+
+          <p class="skill-cat-title lang-fr">Data Engineering &amp; BI</p>
+          <p class="skill-cat-title lang-en">Data Engineering &amp; BI</p>
+          <div class="skill-badge-grid">
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" onerror="iconFallback(this,'SQL')"></span>
+              <span class="skill-badge-label">SQL</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" onerror="iconFallback(this,'GCP')"></span>
+              <span class="skill-badge-label">GCP &middot; BigQuery</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">PBI</span>
+              <span class="skill-badge-label">Power BI</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">Lkr</span>
+              <span class="skill-badge-label">Looker Studio</span>
+            </div>
+            <div class="skill-badge">
+              <span class="skill-badge-icon skill-badge-icon--mono">Shy</span>
+              <span class="skill-badge-label">R Shiny</span>
+            </div>
+            <div class="skill-badge teal">
+              <span class="skill-badge-icon skill-badge-icon--mono">Pip</span>
+              <span class="skill-badge-label lang-fr">Architecture &amp; pipelines</span>
+              <span class="skill-badge-label lang-en">Data architecture &amp; pipelines</span>
+            </div>
+          </div>
+
+          <p class="skill-cat-title lang-fr">Biostatistique</p>
+          <p class="skill-cat-title lang-en">Biostatistics</p>
+          <div class="skill-badge-grid">
+            <div class="skill-badge teal">
+              <span class="skill-badge-icon skill-badge-icon--mono">Srv</span>
+              <span class="skill-badge-label lang-fr">Survie &amp; score de propension</span>
+              <span class="skill-badge-label lang-en">Survival &amp; propensity scoring</span>
+            </div>
+            <div class="skill-badge teal">
+              <span class="skill-badge-icon skill-badge-icon--mono">Inf</span>
+              <span class="skill-badge-label lang-fr">Stat. inférentielles</span>
+              <span class="skill-badge-label lang-en">Inferential stats</span>
+            </div>
+            <div class="skill-badge teal">
+              <span class="skill-badge-icon skill-badge-icon--mono">Épi</span>
+              <span class="skill-badge-label lang-fr">Épidémiologie &amp; rech. clinique</span>
+              <span class="skill-badge-label lang-en">Epidemiology &amp; clinical research</span>
+            </div>
+            <div class="skill-badge teal">
+              <span class="skill-badge-icon skill-badge-icon--mono">Gén</span>
+              <span class="skill-badge-label lang-fr">Génomique &amp; préclinique</span>
+              <span class="skill-badge-label lang-en">Genomics &amp; preclinical</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="skill-cat-title lang-fr" style="margin-top:var(--space-5);">Certifications</p>
+  <p class="skill-cat-title lang-en" style="margin-top:var(--space-5);">Certifications</p>
+  <div class="cert-row">
+    <a class="cert-badge" href="#"><span class="cert-check">✓</span> Python for Beginners <span class="cert-year">2021</span></a>
+    <a class="cert-badge" href="#"><span class="cert-check">✓</span> Data Manipulation with Dplyr in R <span class="cert-year">2023</span></a>
+    <a class="cert-badge" href="#"><span class="cert-check">✓</span> <span class="lang-fr">Tout savoir sur Excel</span><span class="lang-en">Complete Excel Course</span> <span class="cert-year">2024</span></a>
+    <a class="cert-badge" href="#"><span class="cert-check">✓</span> Power BI &mdash; <span class="lang-fr">Débutant à Expert</span><span class="lang-en">Beginner to Expert</span> <span class="cert-year">2024</span></a>
+  </div>
+
+  <div class="lang-grid">
+    <div class="lang-card"><div class="lang-code">FR</div><div class="lang-name">Français</div><div class="lang-level lang-fr">Natif</div><div class="lang-level lang-en">Native</div></div>
+    <div class="lang-card"><div class="lang-code">EN</div><div class="lang-name lang-fr">Anglais</div><div class="lang-name lang-en">English</div><div class="lang-level lang-fr">Professionnel</div><div class="lang-level lang-en">Professional</div></div>
+    <div class="lang-card"><div class="lang-code">YO</div><div class="lang-name">Yoruba</div><div class="lang-level lang-fr">Langue maternelle</div><div class="lang-level lang-en">Native tongue</div></div>
+    <div class="lang-card"><div class="lang-code">FON</div><div class="lang-name">Fon</div><div class="lang-level lang-fr">Courant</div><div class="lang-level lang-en">Fluent</div></div>
+  </div>
+
+  <div class="quote-block">
+    <p class="quote-text lang-fr">« Un homme vaut par ce qu'il fait et non par ce qu'il dit. »</p>
+    <p class="quote-text lang-en">"A man is worth what he does, not what he says."</p>
+  </div>
+</section>
+
+<!-- ============ PAGE 06 — ASPIRATIONS ============ -->
+<section class="page" id="page-aspirations">
+  <p class="eyebrow lang-fr">🎯 &middot; Aspirations</p>
+  <p class="eyebrow lang-en">🎯 &middot; Aspirations</p>
+  <h2 class="section-title lang-fr">Ce que je <em style="font-style:italic;color:var(--meridian-blue);">recherche</em></h2>
+  <h2 class="section-title lang-en">What I'm <em style="font-style:italic;color:var(--meridian-blue);">looking for</em></h2>
+
+  <div class="target-grid">
+    <div class="target-card">
+      <span class="eyebrow">Data Scientist / ML Engineer</span>
+      <p class="lang-fr">Développement d'algorithmes prédictifs et de modèles de machine learning, avec une attention particulière à la validation statistique.</p>
+      <p class="lang-en">Building predictive algorithms and machine learning models, with close attention to statistical validation.</p>
+    </div>
+    <div class="target-card">
+      <span class="eyebrow">GenAI Engineer</span>
+      <p class="lang-fr">Conception de systèmes RAG et applications LLM ancrées sur des sources fiables, du prototype à la mise en production.</p>
+      <p class="lang-en">Designing RAG systems and LLM applications grounded in reliable sources, from prototype to production.</p>
+    </div>
+    <div class="target-card">
+      <span class="eyebrow lang-fr">Data Analyst / Consultant Data</span>
+      <span class="eyebrow lang-en">Data Analyst / Data Consultant</span>
+      <p class="lang-fr">Transformation de la donnée brute en indicateurs de pilotage, dashboards interactifs pour éclairer les décisions.</p>
+      <p class="lang-en">Turning raw data into steering indicators, interactive dashboards to inform decisions.</p>
+    </div>
+    <div class="target-card">
+      <span class="eyebrow">Biostatisticien</span>
+      <span class="eyebrow lang-en">Biostatistician</span>
+      <p class="lang-fr">Méthodologie et statistique en recherche clinique&nbsp;: essais cliniques, analyse de survie, données longitudinales.</p>
+      <p class="lang-en">Methodology and statistics for clinical research: clinical trials, survival analysis, longitudinal data.</p>
+    </div>
+    <div class="target-card">
+      <span class="eyebrow lang-fr">Chargé d'Études Statistiques</span>
+      <span class="eyebrow lang-en">Statistical Studies Analyst</span>
+      <p class="lang-fr">Exploitation de bases de données complexes et mise en place de protocoles statistiques rigoureux. Capacité à traiter les biais, redresser des échantillons et évaluer des comportements.</p>
+      <p class="lang-en">Exploiting complex databases and setting up rigorous statistical protocols. Skilled in handling bias, sample reweighting, and behavioral analysis.</p>
+    </div>
+    <div class="target-card">
+      <span class="eyebrow lang-fr">Analyste Quantitatif</span>
+      <span class="eyebrow lang-en">Quantitative Analyst</span>
+      <p class="lang-fr">Développement de modèles mathématiques robustes pour l'évaluation des risques, la prévision ou l'optimisation. Utilisation de méthodes quantitatives pointues (séries temporelles, analyse de survie) pour modéliser des phénomènes évolutifs.</p>
+      <p class="lang-en">Developing robust mathematical models for risk assessment, forecasting, or optimization. Using advanced quantitative methods (time series, survival analysis) to model evolving phenomena.</p>
+    </div>
+  </div>
+
+  <p class="skill-cat-title lang-fr" style="margin-top:var(--space-5);">Secteurs</p>
+  <p class="skill-cat-title lang-en" style="margin-top:var(--space-5);">Sectors</p>
+  <div class="sector-row">
+    <span class="pill">Biotech / Pharma</span><span class="pill">Santé</span><span class="pill">Tech</span><span class="pill">Retail</span><span class="pill">Banque / Finance</span><span class="pill">Assurance</span><span class="pill">Énergie</span><span class="pill lang-fr">Secteur public / Recherche</span><span class="pill lang-en">Public sector / Research</span>
+  </div>
+
+  <div class="build-note">
+    <span class="eyebrow lang-fr">Comment ce site a été construit</span>
+    <span class="eyebrow lang-en">How this site was built</span>
+    <p class="lang-fr" style="margin:0;">Ce portfolio est lui-même un projet technique&nbsp;: <span class="mono">HTML/CSS/JS</span> sur mesure, hébergé gratuitement sur <span class="mono">GitHub Pages</span>, avec un assistant conversationnel propulsé par la même architecture RAG (<span class="mono">LangChain + Llama 3.3 70B via Groq</span>) que mon projet biomédical, servi par une API <span class="mono">FastAPI</span> déployée sur <span class="mono">Render</span>.</p>
+    <p class="lang-en" style="margin:0;">This portfolio is itself a technical project: custom <span class="mono">HTML/CSS/JS</span>, hosted for free on <span class="mono">GitHub Pages</span>, with a conversational assistant powered by the same RAG architecture (<span class="mono">LangChain + Llama 3.3 70B via Groq</span>) as my biomedical project, served by a <span class="mono">FastAPI</span> API deployed on <span class="mono">Render</span>.</p>
+  </div>
+
+  <p class="skill-cat-title lang-fr" style="margin-top:var(--space-5);">Centres d'intérêt</p>
+  <p class="skill-cat-title lang-en" style="margin-top:var(--space-5);">Interests</p>
+  <div class="interest-grid">
+    <div class="interest-card">
+      <span class="interest-icon">🏃</span>
+      <h4 class="lang-fr">Sport</h4><h4 class="lang-en">Sport</h4>
+      <p class="lang-fr">Course, muscu, football</p>
+      <p class="lang-en">Running, lifting, football</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-icon">🎵</span>
+      <h4 class="lang-fr">Musique</h4><h4 class="lang-en">Music</h4>
+      <p class="lang-fr">Classiques, afrobeats, romantique</p>
+      <p class="lang-en">Classical, afrobeats, romantic</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-icon">✈️</span>
+      <h4 class="lang-fr">Voyages</h4><h4 class="lang-en">Travel</h4>
+      <p class="lang-fr">Portugal, Allemagne, Italie, Arabie Saoudite</p>
+      <p class="lang-en">Portugal, Germany, Italy, Saudi Arabia</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-icon">🔬</span>
+      <h4 class="lang-fr">Recherche &amp; IA</h4><h4 class="lang-en">Research &amp; AI</h4>
+      <p class="lang-fr">Veille active sur les nouvelles méthodes</p>
+      <p class="lang-en">Active watch on new methods</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-icon">🌍</span>
+      <h4 class="lang-fr">Promotion culturelle</h4><h4 class="lang-en">Cultural promotion</h4>
+      <p class="lang-fr">Passionné par la culture Yoruba</p>
+      <p class="lang-en">Passionate about Yoruba culture</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p class="quote-text lang-fr">« Il n'y a pas de personnes bêtes, il n'y a que des personnes qui ne sont pas à leur place. »</p>
+    <p class="quote-text lang-en">"There are no stupid people, only people who are not in their right place."</p>
+  </div>
+</section>
+
+<!-- ============ PAGE 07 — CHATBOT ============ -->
+<section class="page" id="page-chatbot">
+  <p class="eyebrow lang-fr">🤖 &middot; Assistant IA</p>
+  <p class="eyebrow lang-en">🤖 &middot; AI Assistant</p>
+  <h2 class="section-title lang-fr">Posez-moi <em style="font-style:italic;color:var(--meridian-blue);">vos questions</em></h2>
+  <h2 class="section-title lang-en">Ask me <em style="font-style:italic;color:var(--meridian-blue);">anything</em></h2>
+  <p class="section-kicker lang-fr">Un assistant RAG entraîné sur mon parcours réel.</p>
+  <p class="section-kicker lang-en">A RAG assistant trained on my real background.</p>
+
+  <div class="chat-shell">
+    <div class="chat-panel">
+      <div class="chat-header">
+        <span class="lang-fr">Mourad &mdash; Assistant IA</span>
+        <span class="lang-en">Mourad &mdash; AI Assistant</span>
+        <span class="chat-sub lang-fr">Propulsé par Llama 3.3 70B via Groq</span>
+        <span class="chat-sub lang-en">Powered by Llama 3.3 70B via Groq</span>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-bubble bot lang-fr">Bonjour&nbsp;! Je suis l'assistant virtuel de Mourad. Posez-moi une question sur son parcours, ses projets ou ses compétences.</div>
+        <div class="chat-bubble bot lang-en">Hi! I'm Mourad's virtual assistant. Ask me about his background, projects, or skills.</div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Écrivez votre question ici…" class="lang-fr">
+        <input type="text" placeholder="Type your question here…" class="lang-en" style="display:none;">
+        <button onclick="sendChatMessage()" class="lang-fr">Envoyer</button>
+        <button onclick="sendChatMessage()" class="lang-en">Send</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="chat-suggestions">
+        <button class="chat-suggest-btn lang-fr" onclick="askSuggestion(this)">Qui est Mourad&nbsp;?</button>
+        <button class="chat-suggest-btn lang-en" onclick="askSuggestion(this)">Who is Mourad?</button>
+        <button class="chat-suggest-btn lang-fr" onclick="askSuggestion(this)">Quels projets a-t-il déployés&nbsp;?</button>
+        <button class="chat-suggest-btn lang-en" onclick="askSuggestion(this)">What projects has he deployed?</button>
+        <button class="chat-suggest-btn lang-fr" onclick="askSuggestion(this)">Quel type de poste recherche-t-il&nbsp;?</button>
+        <button class="chat-suggest-btn lang-en" onclick="askSuggestion(this)">What kind of role is he looking for?</button>
+        <button class="chat-suggest-btn lang-fr" onclick="askSuggestion(this)">Pourquoi le choisir pour un poste Data Scientist&nbsp;?</button>
+        <button class="chat-suggest-btn lang-en" onclick="askSuggestion(this)">Why hire him for a Data Scientist role?</button>
+      </div>
+      <div class="chat-status lang-fr">⚙ Assistant connecté en direct à mon backend RAG (FastAPI + Groq/Gemini sur Render). Le tout premier message peut prendre jusqu'à une minute si le service était en veille.</div>
+      <div class="chat-status lang-en">⚙ Assistant connected live to my RAG backend (FastAPI + Groq/Gemini on Render). The very first message may take up to a minute if the service was asleep.</div>
+    </div>
+  </div>
+
+  <div class="contact-section" id="contact">
+    <p class="eyebrow lang-fr">✉️ &middot; Contactez-moi</p>
+    <p class="eyebrow lang-en">✉️ &middot; Contact me</p>
+    <h2 class="section-title lang-fr">Une <em style="font-style:italic;color:var(--meridian-blue);">question</em> à me poser directement&nbsp;?</h2>
+    <h2 class="section-title lang-en">A <em style="font-style:italic;color:var(--meridian-blue);">question</em> for me directly?</h2>
+    <p class="section-kicker lang-fr">Un message, une opportunité, une question sur un projet&nbsp;: écrivez-moi directement ici.</p>
+    <p class="section-kicker lang-en">A message, an opportunity, a question about a project: write to me directly here.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+      <div class="form-field">
+        <label for="contact-name" class="lang-fr">Votre nom</label>
+        <label for="contact-name" class="lang-en">Your name</label>
+        <input type="text" id="contact-name" name="name" required
+               data-placeholder-fr="Comment vous appelez-vous ?" data-placeholder-en="What's your name?">
+      </div>
+
+      <div class="form-field">
+        <label for="contact-email" class="lang-fr">Votre e-mail</label>
+        <label for="contact-email" class="lang-en">Your email</label>
+        <input type="email" id="contact-email" name="email" required
+               data-placeholder-fr="Quelle est votre adresse e-mail ?" data-placeholder-en="What's your email address?">
+      </div>
+
+      <div class="form-field">
+        <label for="contact-message" class="lang-fr">Votre message</label>
+        <label for="contact-message" class="lang-en">Your message</label>
+        <textarea id="contact-message" name="message" required
+                  data-placeholder-fr="Que souhaitez-vous me dire ?" data-placeholder-en="What would you like to tell me?"></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+
+      <button type="submit" class="form-submit lang-fr">Envoyer</button>
+      <button type="submit" class="form-submit lang-en">Send</button>
+    </form>
+    <p class="form-note lang-fr">Votre message m'arrive directement par email, je réponds généralement sous 48h.</p>
+    <p class="form-note lang-en">Your message reaches me directly by email, I usually reply within 48h.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="lang-fr">Conçu &amp; codé par Mourad Do Rego &middot; </span>
+    <span class="lang-en">Designed &amp; built by Mourad Do Rego &middot; </span>
+    <a href="https://github.com/Dboy003" target="_blank">GitHub</a> &middot;
+    <a href="https://www.linkedin.com/in/mourad-do-rego/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
